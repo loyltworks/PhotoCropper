@@ -43,7 +43,7 @@ class CropActivity : AppCompatActivity() {
         outputStream.close()
 
         val resultIntent = Intent()
-        resultIntent.putExtra(CROPPED_IMAGE_URI, Uri.fromFile(file))
+        resultIntent.putExtra(CROPPED_IMAGE_URI, Uri.fromFile(file).toString())
         setResult(RESULT_OK, resultIntent)
         finish()
     }
